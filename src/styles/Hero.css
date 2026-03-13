@@ -1,0 +1,244 @@
+/* --- Configuration & Theme --- */
+:root {
+  --color-primary: #0b1a4a;
+  --color-accent: #ff5aa8;
+  --color-secondary: #001d78;
+  --color-text: #6b6176;
+  --color-sub-heading: #0d0084;
+  --color-bg-light: #f5d3da;
+  --color-bg-accent: #ecf6ff;
+  --color-white: #ffffff;
+
+  /* Breakpoints */
+  --tablet: 768px;
+  --desktop: 1024px;
+}
+
+/* --- Block: Hero --- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  background: radial-gradient(
+      ellipse at 0% 0%,
+      rgba(255, 90, 168, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(124, 193, 255, 0.12) 0%,
+      transparent 50%
+    );
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 100px 48px;
+  }
+}
+
+/* Element: Container */
+.hero__container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero__container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* Element: Content Column */
+.hero__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+}
+
+/* Element: Badge */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-secondary);
+  padding: 6px 16px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.hero__badge-text {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero__badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 50%;
+}
+
+/* Element: Title */
+.hero__title {
+  font-size: clamp(36px, 8vw, 52px);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.hero__title-name {
+  font-size: clamp(40px, 10vw, 100px);
+  color: var(--color-accent);
+}
+
+/* Element: Subheadline */
+.hero__subtitle {
+  font-size: clamp(20px, 6vw, 22px);
+  color: var(--color-sub-heading);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Element: Description */
+.hero__description {
+  font-size: 18px;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Element: Meta Grid */
+.hero__meta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 24px;
+}
+
+.hero__meta-item {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.hero__meta-value {
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .hero__meta {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+/* Element: Actions Group */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* Element: Button */
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--color-accent);
+  color: white;
+}
+
+.hero__button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Element: Status Text */
+.hero__status {
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.hero__status-highlight {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Element: Visual Column */
+.hero__visual {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+}
+
+@media (max-width: 768px) {
+  .hero__visual {
+    order: -1;
+  }
+}
+
+/* Element: Image Frame */
+.hero__frame {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 7/10;
+  background: var(--color-white);
+  border: 2px solid var(--color-accent);
+  border-radius: 96px 247px 260px 218px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hero__frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    147deg,
+    rgba(255, 90, 168, 0.1) 0%,
+    rgba(124, 193, 255, 0.05) 100%
+  );
+  z-index: 0;
+}
+
+/* Element: Profile Image */
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 96px 247px 260px 218px;
+  display: block;
+  z-index: 1;
+}

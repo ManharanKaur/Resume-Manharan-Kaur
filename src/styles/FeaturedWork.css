@@ -1,0 +1,84 @@
+.featured-work {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 60px 24px;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(
+      ellipse at 0% 0%,
+      rgba(255, 90, 168, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(124, 193, 255, 0.12) 0%,
+      transparent 50%
+    );
+}
+
+.featured-work__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.featured-work__title {
+  color: #071460;
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+}
+
+.featured-work__subtitle {
+  color: #6B6176;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Horizontal Scroll Container */
+.featured-work__scroll-wrapper {
+  overflow-x: auto;
+  padding: 20px 0 40px 0;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #FF5AA8 transparent;
+  -webkit-overflow-scrolling: touch; /* Smooth iOS scroll */
+}
+
+/* Hide scrollbar for Chrome/Safari if preferred, 
+   but keeping it slightly visible helps UX on desktop */
+.featured-work__scroll-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.featured-work__scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #FF5AA8;
+  border-radius: 10px;
+}
+
+.featured-work__grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center; /* Center cards on desktop */
+}
+
+/* Tablets and Mobile */
+@media (max-width: 1024px) {
+  .featured-work__grid {
+    justify-content: flex-start; /* Start from left to enable scroll */
+    padding: 0 20px;
+  }
+  
+  .featured-work__title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-work {
+    padding: 40px 16px;
+  }
+  
+  .featured-work__title {
+    font-size: 28px;
+  }
+}

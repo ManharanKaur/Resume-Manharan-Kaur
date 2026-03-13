@@ -1,0 +1,18 @@
+/* === General Styles === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* font-family: 'Poppins', sans-serif; */
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #c1b5f8, #f8b9e6); 
+  color: #01128b;
+}
+
+section {
+  background: linear-gradient(135deg, #ffeea6, #ffb3e9); 
+  padding: 60px 30px;
+  scroll-margin-top: 100px;
+}

@@ -1,0 +1,115 @@
+/* Block */
+.skills-section {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(
+      ellipse at 100% 0%,
+      rgba(124, 193, 255, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 0% 100%,
+      rgba(255, 90, 168, 0.12) 0%,
+      transparent 50%
+    );
+}
+
+/* Elements */
+.skills-section__title {
+  color: #071460;
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.skills-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.skills-card {
+  background: rgba(255, 255, 255, 0.80);
+  backdrop-filter: blur(6px);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 30px rgba(30, 58, 138, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.80);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skills-card__icon-container {
+  width: 56px;
+  height: 56px;
+  background: #F7EAD2;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-card__icon {
+  width: 28px;
+  height: 28px;
+  color: #3B82F6;
+}
+
+.skills-card__title {
+  color: #071460;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.skills-card__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills-card__tag {
+  background: #FFF1E0;
+  padding: 8px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #071460;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .skills-section__grid {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+  }
+  
+  .skills-section {
+    padding: 60px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .skills-section__title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .skills-card {
+    padding: 24px;
+  }
+
+  .skills-card__tag {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+}
