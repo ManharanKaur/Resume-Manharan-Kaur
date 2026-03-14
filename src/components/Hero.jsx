@@ -42,7 +42,7 @@ export const Hero = () => {
             <a href="#featured-work" className="hero__button">
               Explore my work
             </a>
-            <a href="public/Resume__Manharan.pdf" target="_blank" className="hero__button">
+            <a href="./Resume__Manharan.pdf" target="_blank" className="hero__button">
               View Resume
             </a>
           </div>
