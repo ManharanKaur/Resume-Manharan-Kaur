@@ -36,9 +36,9 @@ export const Hero = () => {
           </div>
 
           <div className="hero__actions">
-            <a href="#aboutme" className="hero__button">
+            {/* <a href="#aboutme" className="hero__button">
               About me
-            </a>
+            </a> */}
             <a href="#featured-work" className="hero__button">
               Explore my work
             </a>
