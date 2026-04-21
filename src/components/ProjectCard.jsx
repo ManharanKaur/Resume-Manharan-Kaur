@@ -19,7 +19,9 @@ import '../styles/ProjectCard.css';
           ))}
         </div>
         
-        <a href={project.link} className="project-card__button">
+        <a href={project.link} 
+            className="project-card__button"
+            target='_blank'>
           {project.linkText}
         </a>
       </div>

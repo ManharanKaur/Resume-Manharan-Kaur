@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { SkillsSection } from "./components/SkillsSection";
+import { ExperienceSection } from "./components/ExperienceSection";
 import { FeaturedWork } from "./components/FeaturedWork";
 import { ContactSection } from "./components/ContactSection";
 import styled from "styled-components";
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Hero />
       <SkillsSection />
+      <ExperienceSection />
       <FeaturedWork />
       <ContactSection />
     </PageWrapper>

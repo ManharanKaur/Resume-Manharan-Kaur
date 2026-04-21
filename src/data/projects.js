@@ -1,7 +1,7 @@
 export const projectsData = [
   {
     id: 1,
-    category: "AI Application",
+    category: "GEN AI",
     title: "Sofia - Virtual Assistant",
     description:
       "A sophisticated Python-based virtual assistant capable of executing voice commands to fetch real-time weather and manage daily queries.",
@@ -18,7 +18,7 @@ export const projectsData = [
       "A modern travel agency website for discovering destinations, booking trips, and planning seamless travel experiences.",
     image: "./Third_Space_Travel.jpg",
     tags: ["React", "Javascript", "Figma"],
-    link: "https://www.thirdspacetravel.com",
-    linkText: "Visit Website",
+    link: "https://github.com/PiercedBySanity1410/ThirdSpaceTravel/tree/main",
+    linkText: "Visit Repository",
   },
 ];
