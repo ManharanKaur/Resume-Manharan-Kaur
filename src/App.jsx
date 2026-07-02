@@ -4,6 +4,7 @@ import { Hero } from "./components/Hero";
 import { SkillsSection } from "./components/SkillsSection";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { FeaturedWork } from "./components/FeaturedWork";
+import { Certificates } from "./components/Certificates";
 import { ContactSection } from "./components/ContactSection";
 import styled from "styled-components";
 
@@ -20,6 +21,7 @@ function App() {
       <SkillsSection />
       <ExperienceSection />
       <FeaturedWork />
+      <Certificates />
       <ContactSection />
     </PageWrapper>
   );

@@ -19,11 +19,19 @@ import '../styles/ProjectCard.css';
           ))}
         </div>
         
-        <a href={project.link} 
-            className="project-card__button"
-            target='_blank'>
-          {project.linkText}
-        </a>
+        <div className="project-card__buttons">
+          {project.buttons.map((button, index) => (
+            <a
+              key={index}
+              href={button.link}
+              className="project-card__button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {button.text}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -13,18 +13,7 @@ export const ExperienceSection = () => {
         "Performed data preprocessing, model training, and evaluation",
         "Used Python and relevant ML/NLP tools",
       ],
-    },
-    {
-      company: "Indiaum Solutions",
-      role: "Video Annotator Intern",
-      date: "April 14, 2026 – Present",
-      points: [
-        "Annotated video datasets for AI/ML model training",
-        "Performed frame-by-frame labeling of objects/events",
-        "Ensured high-quality and consistent data annotation",
-        "Followed structured workflows and guidelines",
-      ],
-    },
+    }
   ];
 
   return (
