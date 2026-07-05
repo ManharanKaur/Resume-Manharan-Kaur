@@ -37,4 +37,23 @@ export const projectsData = [
       },
     ],
   },
+  {
+    id: 3,
+    category: "Full Stack",
+    title: "Quiz Piece",
+    description:
+      "A feature-rich quiz platform offering secure authentication, personalized profiles, quizzes, difficulty selection, score tracking, and a seamless responsive experience.",
+    image: "../projects/Quiz_Piece.jpg",
+    tags: ["React", "Node.js", "MongoDB"],
+    buttons: [
+      {
+        text: "Visit Repository",
+        link: "https://github.com/ManharanKaur/Quiz-Piece",
+      },
+      {
+        text: "Live Demo",
+        link: "https://quiz-piece-seven.vercel.app",
+      },
+    ],
+  },
 ];
