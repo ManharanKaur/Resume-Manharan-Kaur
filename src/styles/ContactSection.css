@@ -1,137 +1,77 @@
-/* Variables for easy maintenance */
-:root {
-  --color-bg-pink: #FFEAF0;
-  --color-text-accent: #FF5AA5;
-  --color-text-main: #09145A;
-  --color-button-bg: #001D78;
-  --color-icon-blue: #6BD1FF;
-  --font-inter: 'Inter', sans-serif;
-}
-
+/* --- Contact Section Styles --- */
 .contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 20px; /* Mobile padding */
-  font-family: var(--font-inter);
-   background: radial-gradient(
-      ellipse at 100% 0%,
-      rgba(124, 193, 255, 0.12) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      ellipse at 0% 100%,
-      rgba(255, 90, 168, 0.12) 0%,
-      transparent 50%
-    );
-}
-
-.contact-section__container {
-  width: 100%;
-  max-width: 50%;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  background: #fce1f6;
-}
-
-/* Header & Typography */
-.contact-section__header {
-  text-align: center;
-}
-
-.contact-section__title {
-  color: var(--color-text-accent);
-  font-size: 32px; /* Mobile font size */
-  font-weight: 800;
-  line-height: 1.2;
-  margin: 0 0 16px 0;
-}
-
-.contact-section__description {
-  color: var(--color-text-main);
-  font-size: 16px;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0;
-}
-
-.contact-section__br--desktop {
-  display: none;
-}
-
-/* Buttons / Actions */
-.contact-section__actions {
-  display: flex;
-  flex-direction: column; /* Stacked on mobile */
-  gap: 16px;
-  width: 100%;
-}
-
-.contact-section__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: var(--color-button-bg);
-  color: white;
-  text-decoration: none;
-  padding: 16px 32px;
-  border-radius: 12px;
-  font-weight: 700;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0px 8px 24px rgba(10, 17, 71, 0.04);
-}
-
-.contact-section__button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0px 12px 30px rgba(10, 17, 71, 0.1);
-}
-
-.contact-section__icon {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--color-icon-blue);
+  padding: 6rem 0;
   position: relative;
+  background-color: var(--color-cyber-black, #050505);
+  overflow: hidden;
 }
 
-/* TABLET BREAKPOINT */
+.contact-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-social-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: rgba(8, 18, 41, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 300ms ease;
+  backdrop-filter: blur(16px);
+}
+
+.contact-social-card:hover {
+  border-color: rgba(76, 201, 255, 0.3);
+  background-color: rgba(8, 18, 41, 0.4);
+}
+
+.contact-form-card {
+  background-color: rgba(8, 18, 41, 0.3);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
 @media (min-width: 768px) {
-  .contact-section {
-    padding: 100px 40px;
-  }
-
-  .contact-section__title {
-    font-size: 44px;
-  }
-
-  .contact-section__actions {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .contact-section__button {
-    flex: 0 1 auto;
-    min-width: 150px;
+  .contact-form-card {
+    padding: 2.5rem;
   }
 }
 
-/* DESKTOP BREAKPOINT */
-@media (min-width: 1024px) {
+.contact-input {
+  width: 100%;
+  background-color: rgba(5, 5, 5, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  color: var(--color-cyber-white, #F5F5F5);
+  transition: all 200ms ease;
+}
 
-  .contact-section__title {
-    font-size: 56px;
-    line-height: 89.6px;
-  }
+.contact-input:focus {
+  outline: none;
+  border-color: var(--color-cyber-pink, #ff4fa3);
+  box-shadow: 0 0 15px rgba(255, 79, 163, 0.3);
+}
 
-  .contact-section__description {
-    font-size: 20px;
-  }
-
-  .contact-section__br--desktop {
-    display: block;
-  }
+.contact-submit-btn {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: linear-gradient(to right, #ff4fa3, #4CC9FF);
+  padding: 1px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 1rem;
 }

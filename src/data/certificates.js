@@ -23,7 +23,7 @@ export const certificatesData = [
     issuer: "Udemy",
     status: "Issued: June 2026",
     tags: ["Generative AI", "ChatGPT", "Claude"],
-    theme: "blue",
+    theme: "pink",
     link: "https://ude.my/UC-b7989074-ab63-427e-a918-a374477524cd",
   },
 ];

@@ -1,70 +1,104 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Code, Cpu, Wrench, Zap } from 'lucide-react';
 import '../styles/SkillsSection.css';
 
 export const SkillsSection = () => {
   const skillGroups = [
     {
       title: "Core Computing",
-      skills: ["Python", "C++", "JavaScript", "SQL", "HTML/CSS", "ML", "DL", "Natural Language Processing", "Computer Vision", "DSA", "OOPs", "DBMS", "OS", "Computer Networks", "Cryptography", "Exploratory Data Analysis", "Data Visualization"],
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="skills-card__icon">
-          <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
-        </svg>
-      )
+      skills: ["Python", "C++", "JavaScript", "SQL", "HTML/CSS", "ML", "DL", "NLP", "Computer Vision", "DSA", "OOPs", "DBMS", "OS", "Networks", "Cryptography", "EDA", "Data Visualization"],
+      icon: <Code className="text-cyber-blue mb-4" size={32} />
     },
     {
       title: "Frameworks & Libraries",
-      skills: ["React", "Numpy", "Pandas", "NLTK", "Scikit-learn", "TensorFlow", "Keras", "pyttsx3" ,"SpeechRecognition"],
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="skills-card__icon">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-        </svg>
-      )
+      skills: ["React", "Numpy", "Pandas", "NLTK", "Scikit-learn", "TensorFlow", "Keras", "pyttsx3", "SpeechRecognition"],
+      icon: <Cpu className="text-cyber-pink mb-4" size={32} />
     },
     {
       title: "Tools & Platforms",
-      skills: ["Visual Studio Code", "Terminal", "Git & GitHub", "npm", "Vite", "ChatGPT", "Figma", "Tableau"],
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="skills-card__icon">
-          <circle cx="12" cy="12" r="3" />
-          <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
-        </svg>
-      )
+      skills: ["VS Code", "Terminal", "Git & GitHub", "npm", "Vite", "Figma", "Tableau"],
+      icon: <Wrench className="text-cyber-blue mb-4" size={32} />
     },
     {
-      title: "Other Skills",
+      title: "Soft Skills",
       skills: ["Debugging", "Leadership", "Problem Solving", "Communication"],
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="skills-card__icon">
-          <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-          <polyline points="22 4 12 14.01 9 11.01" />
-        </svg>
-      )
+      icon: <Zap className="text-cyber-pink mb-4" size={32} />
     }
   ];
 
-  return (
-    <section className="skills-section" id="skills-section">
-      <header className="skills-section__header">
-        <h2 className="skills-section__title">My Skills</h2>
-      </header>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
 
-      <div className="skills-section__grid">
-        {skillGroups.map((group, index) => (
-          <article key={index} className="skills-card">
-            <div className="skills-card__icon-container">
-              {group.icon}
-            </div>
-            <h3 className="skills-card__title">{group.title}</h3>
-            <div className="skills-card__list">
-              {group.skills.map((skill, skillIndex) => (
-                <span key={skillIndex} className="skills-card__tag">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </article>
-        ))}
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, y: 0,
+      transition: { type: "spring", stiffness: 100 }
+    }
+  };
+
+  return (
+    <section id="skills-section" className="skills-section">
+      <div className="skills-container">
+        
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue to-cyber-pink animate-gradient">
+              My Arsenal
+            </span>
+          </h2>
+          <p className="text-cyber-white/60 max-w-2xl mx-auto">
+            The technologies and tools I use to build robust and scalable digital experiences.
+          </p>
+        </motion.div>
+
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {skillGroups.map((group, index) => (
+            <motion.div 
+              key={index}
+              variants={itemVariants}
+              className="skill-card group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-cyber-pink/0 to-cyber-blue/0 group-hover:from-cyber-pink/5 group-hover:to-cyber-blue/5 transition-all duration-500" />
+              
+              <div className="relative z-10">
+                {group.icon}
+                <h3 className="text-2xl font-semibold mb-6 text-cyber-white tracking-wide">{group.title}</h3>
+                
+                <div className="flex flex-wrap gap-3">
+                  {group.skills.map((skill, skillIndex) => (
+                    <motion.div
+                      key={skillIndex}
+                      whileHover={{ scale: 1.05, y: -3 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="skill-chip cursor-default relative overflow-hidden"
+                    >
+                      <span className="relative z-10">{skill}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

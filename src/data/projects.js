@@ -43,7 +43,7 @@ export const projectsData = [
     title: "Quiz Piece",
     description:
       "A feature-rich quiz platform offering secure authentication, personalized profiles, quizzes, difficulty selection, score tracking, and a seamless responsive experience.",
-    image: "../projects/Quiz_Piece.jpg",
+    image: "../projects/Quiz_Piece.png",
     tags: ["React", "Node.js", "MongoDB"],
     buttons: [
       {
